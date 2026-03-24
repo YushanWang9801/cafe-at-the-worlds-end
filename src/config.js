@@ -35,7 +35,7 @@ export async function loadApiConfig() {
   if (cachedConfig) return cachedConfig
 
   try {
-    const response = await fetch('/secure-config.json')
+    const response = await fetch(`${import.meta.env.BASE_URL}secure-config.json`)
     const { iv, data } = await response.json()
     
     const decrypted = await decrypt(data, iv)
