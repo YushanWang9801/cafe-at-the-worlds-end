@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { loadApiConfig } from './config'
 
 /** 背景图：放在 public/cafe-bg.png，可自行替换 */
-const CAFE_BG_URL = '/cafe-bg.png'
+const CAFE_BG_URL = `${import.meta.env.BASE_URL}cafe-bg.png`
 
 /** 背景音乐：放在 public/bgm.mp3，可自行替换（设为 null 则不播放） */
-const BGM_URL = '/bgm.mp3'
+const BGM_URL = `${import.meta.env.BASE_URL}bgm.mp3`
 
 const SYSTEM_PROMPT = `你是世界尽头的咖啡师，来自《世界尽头的咖啡馆》。
 
